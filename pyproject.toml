@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "task-executor"
+version = "0.1.0"
+description = ""
+authors = ["Trevor McCasland <trevormccasland1@gmail.com>"]
+readme = "README.md"
+packages = [{include = "task_executor"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = "^3.0.2"
+
+[tool.poetry.scripts]
+task-executor = "task_executor.api:main"
+
+[[tool.poetry.source]]
+name = "fpho"
+url = "https://files.pythonhosted.org"
+priority = "primary"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
