@@ -10,6 +10,8 @@ packages = [{include = "task_executor"}]
 python = "^3.11"
 flask = "^3.0.2"
 sqlalchemy = "^2.0.25"
+flask-sqlalchemy = "^3.1.1"
+psycopg2-binary = "^2.9.9"
 
 [tool.poetry.scripts]
 task-executor = "task_executor.api:main"
