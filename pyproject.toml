@@ -9,6 +9,7 @@ packages = [{include = "task_executor"}]
 [tool.poetry.dependencies]
 python = "^3.11"
 flask = "^3.0.2"
+sqlalchemy = "^2.0.25"
 
 [tool.poetry.scripts]
 task-executor = "task_executor.api:main"
