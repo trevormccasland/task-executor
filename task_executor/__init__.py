@@ -1,4 +1,5 @@
 from flask import Flask
+from flask_seeder import FlaskSeeder
 from flask_sqlalchemy import SQLAlchemy
 from task_executor.db.models import base
 
@@ -7,3 +8,5 @@ app.config["SQLALCHEMY_DATABASE_URI"] = "postgresql+psycopg2://task_executor:sec
 
 
 db = SQLAlchemy(app, model_class=base.Base)
+seeder = FlaskSeeder()
+seeder.init_app(app, db)

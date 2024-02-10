@@ -108,10 +108,20 @@ Use poetry to install the app
 poetry install
 ```
 
-#### postgres setup
-Install pgadmin https://www.postgresql.org/ftp/pgadmin/pgadmin4/v8.2/windows/
+## postgres setup
+Install pgadmin from their website
 Create a user named task_executor, give it all permissions, and give it the password secret
 Create a database named task-executor and assign the owner as task_executor
+
+### seeding
+Seed the database
+```bash
+poetry shell
+export FLASK_APP="/Users/trevormccasland/Repositories/task-execuctor/task_executor/__init__.py"
+flask seed run
+```
+
+## Start the app
 
 Run the app
 ```bash
