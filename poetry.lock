@@ -59,6 +59,20 @@ async = ["asgiref (>=3.2)"]
 dotenv = ["python-dotenv"]
 
 [[package]]
+name = "flask-seeder"
+version = "1.2.0"
+description = "Flask extension to seed database through scripts"
+optional = false
+python-versions = "*"
+files = [
+    {file = "Flask-Seeder-1.2.0.tar.gz", hash = "sha256:7fcfd2ad9aa0b7aad32b0d4684d2ee6cfcbc06a5ba1f8e3fe6ea07bf0f5b757c"},
+    {file = "Flask_Seeder-1.2.0-py3-none-any.whl", hash = "sha256:8ffa20de8fdfe8af1852f994d5b8e41792faf8f90e0065e1c6b6f71e324cb7ea"},
+]
+
+[package.dependencies]
+Flask = ">=1.0.2"
+
+[[package]]
 name = "flask-sqlalchemy"
 version = "3.1.1"
 description = "Add SQLAlchemy support to your Flask application."
@@ -440,4 +454,4 @@ watchdog = ["watchdog (>=2.3)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "ec8a8993cb7f1f11b7a647b9d89ab071d0513820f84dd7666c8ee727da8b871b"
+content-hash = "392929f6bc668eaa8cba94411ae208b547b76bd858fcdfce55f3fed0b566fcb2"
