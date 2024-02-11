@@ -113,10 +113,11 @@ Install pgadmin from their website
 Create a user named task_executor, give it all permissions, and give it the password secret
 Create a database named task-executor and assign the owner as task_executor
 
-### seeding
+## seeding
 Seed the database
 ```bash
 poetry shell
+# windows $env:FLASK_APP="C:\Users\trevo\task-executor\task_executor\__init__.py"
 export FLASK_APP="/Users/trevormccasland/Repositories/task-execuctor/task_executor/__init__.py"
 flask seed run
 ```
@@ -127,3 +128,10 @@ Run the app
 ```bash
 poetry run task-executor
 ```
+
+## VSCode Select Python Interpreter
+Run `poetry env info` to get the path the Virtualenv interpreter
+
+ctrl + shift + p and select "Python: Select Interpreter", select "Enter interpreter path..." and use the path from poetry.
+
+This will make it so the interpreter can detect packages and autocomplete for you.
