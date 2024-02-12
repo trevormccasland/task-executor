@@ -1,10 +1,10 @@
 from task_executor.db.models import user
-from task_executor import db, app
+from task_executor import db_integration, app
 
 
 @app.route("/")
 def hello_world():
-    item = db.one_or_404(db.select(user.User).filter_by(name="example"))
+    item = db_integration.one_or_404(db_integration.select(user.User).filter_by(name="example"))
     return item.as_dict()
 
 def main():
