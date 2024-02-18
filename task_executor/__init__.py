@@ -2,7 +2,7 @@ from flask import Flask
 from flask_login import LoginManager
 from flask_seeder import FlaskSeeder
 from flask_sqlalchemy import SQLAlchemy
-from task_executor.db.models import base
+from task_executor.db.models import Base
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = (
@@ -10,7 +10,7 @@ app.config["SQLALCHEMY_DATABASE_URI"] = (
 )
 
 
-repository = SQLAlchemy(app, model_class=base.Base)
+repository = SQLAlchemy(app, model_class=Base)
 seeder = FlaskSeeder()
 seeder.init_app(app, repository)
 login_manager = LoginManager()

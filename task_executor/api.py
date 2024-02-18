@@ -1,10 +1,16 @@
 from task_executor.db.models import User
-from task_executor import repository, app, login_manager
+from task_executor import repository, app
+from flask_login import current_user, login_user
+from flask import request
 
 
-@login_manager.user_loader
-def load_user(user_id):
-    return User.query.get(user_id)
+@app.route("/login")
+def login():
+    if current_user.is_authenticated:
+        return "Already Authenticated"
+    user_id = request.args.get("id")
+    user = repository.one_or_404(repository.select(User).filter_by(id=user_id))
+    return "Login Succesful"
 
 
 @app.route("/")
